@@ -1221,6 +1221,7 @@ fn test_into_string_long_static_str() {
 }
 
 #[test]
+#[rustversion::attr(since(1.84), allow(dangling_pointers_from_temporaries))]
 fn test_into_string_empty_str() {
     let data = "";
     let str_len = data.len();
@@ -1237,6 +1238,7 @@ fn test_into_string_empty_str() {
 }
 
 #[test]
+#[rustversion::attr(since(1.84), allow(dangling_pointers_from_temporaries))]
 fn test_into_string_empty_static_str() {
     let data = "";
     let str_len = data.len();
